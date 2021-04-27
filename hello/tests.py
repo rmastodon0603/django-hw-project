@@ -1,7 +1,7 @@
 from django.http import HttpRequest
 from django.test import TestCase
 from django.urls import resolve
-from .apps import WebsiteConfig
+from .apps import HelloConfig
 from website import settings
 
 from .views import index, about
@@ -10,7 +10,7 @@ from .views import index, about
 class AppTest(TestCase):
 
     def test_app_should_be_hello(self):
-        self.assertEqual(WebsiteConfig.name, 'hello', "Приложение должно называться hello")
+        self.assertEqual(HelloConfig.name, 'hello', "Приложение должно называться hello")
 
 
 class HomePageTest(TestCase):
